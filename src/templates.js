@@ -1,4 +1,4 @@
-export function title(el){
+function title(el){
     return `
         <div class="row">
             <div class="col-sm">
@@ -8,7 +8,7 @@ export function title(el){
     `
 }
 
-export function text(el){
+function text(el){
     return `
         <div class="row">
             <div class="col-sm">
@@ -18,7 +18,7 @@ export function text(el){
     `
 }
 
-export function columns(el){
+function columns(el){
     const html = el.value.map(item => `<div class="col-sm"><p>${item}</p></div>`);
     return `
         <div class="row">
@@ -27,7 +27,7 @@ export function columns(el){
     `
 }
 
-export function image(el){
+function image(el){
     return `
         <div class="row">
             <div class="col-sm">
@@ -35,4 +35,11 @@ export function image(el){
             </div>
         </div>
     `
+}
+
+export const templates = {
+    title,
+    text,
+    columns,
+    image
 }
