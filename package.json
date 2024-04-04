@@ -1,0 +1,26 @@
+{
+  "name": "constructorofsites",
+  "version": "1.0.0",
+  "description": "JavaScript constructor of sites",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./src/index.html -p 4200 --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelBoiko/constructor.git"
+  },
+  "keywords": [
+    "js",
+    "javascript"
+  ],
+  "author": "Michael <mchlboiko@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelBoiko/constructor/issues"
+  },
+  "homepage": "https://github.com/MichaelBoiko/constructor#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
