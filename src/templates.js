@@ -1,40 +1,20 @@
+import {row, col} from './utils';
+
 function title(el){
-    return `
-        <div class="row">
-            <div class="col-sm">
-                <h1>${el.value}</h1>
-            </div>
-        </div>
-    `
+    return row(col(`<h1>${el.value}</h1>`));
 }
 
 function text(el){
-    return `
-        <div class="row">
-            <div class="col-sm">
-                <p>${el.value}</p>
-            </div>
-        </div>
-    `
+    return row(col(`<p>${el.value}</p>`));
 }
 
 function columns(el){
-    const html = el.value.map(item => `<div class="col-sm"><p>${item}</p></div>`);
-    return `
-        <div class="row">
-            ${html.join('')}
-        </div>
-    `
+    const html = el.value.map(item => col(item));
+    return row(html.join(''));
 }
 
 function image(el){
-    return `
-        <div class="row">
-            <div class="col-sm">
-                <img src="${el.value}">
-            </div>
-        </div>
-    `
+    return row(col(`<img src="${el.value}">`));
 }
 
 export const templates = {
