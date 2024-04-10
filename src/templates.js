@@ -1,7 +1,8 @@
-import {row, col} from './utils';
+import {row, col, css} from './utils';
 
 function title(el){
-    return row(col(`<h1>${el.value}</h1>`));
+    const {tag = 'h1', styles} = el.options;
+    return row(col(`<${tag}>${el.value}</${tag}>`), css(styles));
 }
 
 function text(el){
