@@ -6,16 +6,17 @@ function title(el){
 }
 
 function text(el){
-    return row(col(`<p>${el.value}</p>`));
+    return row(`<p>${el.value}</p>`, css(el.options.styles));
 }
 
 function columns(el){
     const html = el.value.map(item => col(item));
-    return row(html.join(''));
+    return row(html.join(''), css(el.options.styles));
 }
 
 function image(el){
-    return row(col(`<img src="${el.value}">`));
+    const {imageStyles, alt='', styles} = el.options;
+    return row(`<img src="${el.value}" alt="${alt}" style="${css(imageStyles)}">`, css(styles));
 }
 
 export const templates = {
