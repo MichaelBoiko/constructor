@@ -7,13 +7,13 @@ class Block {
     }
 
     toHTML(){
-        throw new Error('Метод toHTML должен быть реализован!')
+        throw new Error('Метод toHTML должен быть реализован!');
     }
 }
 
 export class TitleBlock extends Block {
     constructor(value, options) {
-        super(value, options)
+        super(value, options);
     }
 
     toHTML() {
@@ -24,7 +24,7 @@ export class TitleBlock extends Block {
 
 export class ImageBlock extends Block {
     constructor(value, options) {
-        super(value, options)
+        super(value, options);
     }
 
     toHTML() {
@@ -35,7 +35,7 @@ export class ImageBlock extends Block {
 
 export class ColumnsBlock extends Block {
     constructor(value, options) {
-        super(value, options)
+        super(value, options);
     }
 
     toHTML() {
@@ -46,7 +46,7 @@ export class ColumnsBlock extends Block {
 
 export class TextBlock extends Block {
     constructor(value, options) {
-        super(value, options)
+        super(value, options);
     }
 
     toHTML() {
